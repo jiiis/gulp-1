@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="content" class="content" style="width: 300px; height: 200px; background: #69a0b4;"></div>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script>
+    $(function() {
+      $('#content').click(function() {
+        console.log($(this).css('width'));
+      });
+    });
+    </script>
+</body>
+
+</html>
