@@ -1,1 +1,3 @@
-console.log('From app/js/');
+var a = {};
+a.b = 'c';
+console.log(a);

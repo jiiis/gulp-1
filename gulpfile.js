@@ -1,7 +1,9 @@
-var gulp = require('gulp');
+var gulp = require('gulp'),
+    uglify = require('gulp-uglify');
 
 gulp.task('scripts', function() {
     gulp.src('app/js/**/*.js')
+        .pipe(uglify())
         .pipe(gulp.dest('app/jss'));
 });
 
