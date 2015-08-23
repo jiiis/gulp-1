@@ -1,21 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div id="content" class="content" style="width: 300px; height: 200px; background: #69a0b4;"></div>
+    <!--[if lt IE 10]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <header id="header">
+        <div class="page">
+            <div id="header-wrapper">
+                <h1 class="site-title">
+                    <i class="fa fa-apple"></i>
+                </h1>
+            </div>
+        </div>
+    </header>
+    <div id="content">
+        <div class="page">
+            <div id="primary">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A id aspernatur, provident maiores placeat. Hic beatae consequuntur fugiat architecto pariatur quibusdam unde quod dolor tenetur. Aut quaerat quia quisquam quam!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil libero veritatis magni, quibusdam quo laudantium architecto fugiat ut omnis voluptas quam facere minima aut, harum quaerat pariatur aliquid! Accusamus, nihil.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt inventore cum molestias ratione saepe quibusdam recusandae accusamus beatae atque maiores reprehenderit, eligendi corrupti error aspernatur laborum similique harum. Ullam, fuga.</p>
+            </div>
+            <aside id="aside">
+                <h2>Awesome Aside</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, expedita! Ipsam debitis eveniet, ratione, consequuntur voluptatibus minima. Expedita neque ipsum, doloribus magni nihil! Animi itaque reprehenderit, id omnis eaque, a.</p>
+            </aside>
+        </div>
+    </div>
     <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script>
-    $(function() {
-      $('#content').click(function() {
-        console.log($(this).css('width'));
-      });
-    });
-    </script>
 </body>
 
 </html>
