@@ -1,10 +1,8 @@
 var gulp = require('gulp');
 
-gulp.task('scripts', function(cb) {
-    setTimeout(function() {
-        console.log('Task "scripts" is finished.');
-        cb();
-    }, 1000);
+gulp.task('scripts', function() {
+    gulp.src('app/js/**/*.js')
+        .pipe(gulp.dest('app/jss'));
 });
 
 gulp.task('default', ['scripts']);
