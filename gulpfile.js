@@ -18,7 +18,7 @@ gulp.task('compass', function() {
             config_file: './config.rb',
             css: 'app/css',
             sass: 'app/scss',
-            require: 'susy'
+            require: ['susy', 'breakpoint']
         }))
         .pipe(gulp.dest('app/css'));
 });

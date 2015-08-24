@@ -1,0 +1,40 @@
+$susy: (
+    columns: 12,
+    gutters: 1/2,
+    math: fluid,
+    gutter-position: inside
+);
+
+body {
+    margin: 0;
+    padding: 0;
+    background: $color-body-background;
+    color: $color-body-text;
+    line-height: $line-height-mobile;
+    font-family: $font-family-primary;
+    font-size: $font-size-mobile;
+    font-weight: $font-weight-body;
+    
+    @include breakpoint($break-menu) {
+        font-size: $font-size;
+        line-height: $line-height;
+    }
+}
+
+#header, #content, .page {
+    overflow: hidden;
+}
+
+.page {
+    @include container($container);
+    background: $white;
+    padding: 0 3%;
+}
+
+#header {
+    background: $grey-light;
+    
+    #header-wrapper {
+        @include span(12);
+    }
+}
