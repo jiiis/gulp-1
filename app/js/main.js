@@ -1,3 +1,3 @@
 var a = {};
 a.b = 'c';
-console.log(a);
+console.log('111');
