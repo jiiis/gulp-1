@@ -38,3 +38,19 @@ body {
         @include span(12);
     }
 }
+
+#content {
+    #primary {
+        @include span(12);
+        @include breakpoint($break-menu) {
+            @include span(8);
+        }
+    }
+
+    #aside {
+        @include span(12);
+        @include breakpoint($break-menu) {
+            @include span(4);
+        }
+    }
+}
