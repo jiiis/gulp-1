@@ -3,7 +3,7 @@ var gulp = require('gulp'),
     rename = require('gulp-rename');
 
 gulp.task('scripts', function() {
-    gulp.src('app/js/**/*.js')
+    gulp.src(['app/js/**/*.js', '!app/js/**/*.min.js'])
         .pipe(rename({
             suffix: '.min'
         }))
