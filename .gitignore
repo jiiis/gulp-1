@@ -37,7 +37,7 @@ ehthumbs.db
 Thumbs.db
 Icon?
 
-# Build Systems #
+# Build systems #
 #################
 node_modules/
 bower_components/
@@ -45,3 +45,7 @@ bower_components/
 *.css.map
 build/
 dist/
+
+# Minified files #
+##################
+*.min.js
