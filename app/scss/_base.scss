@@ -32,8 +32,8 @@ body {
 }
 
 #header {
-    background: $grey-light;
-    
+    text-align: center;
+
     #header-wrapper {
         @include span(12);
     }
