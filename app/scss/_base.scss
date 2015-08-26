@@ -1,6 +1,6 @@
 $susy: (
     columns: 12,
-    gutters: 1/2,
+    gutters: 4,
     math: fluid,
     gutter-position: inside
 );
@@ -29,6 +29,10 @@ body {
     @include container($container);
     background: $white;
     padding: 0 3%;
+
+    p {
+        margin: 26px 0;
+    }
 }
 
 #header {
@@ -40,6 +44,8 @@ body {
 }
 
 #content {
+    margin-top: $margin-main;
+
     #primary {
         @include span(12);
         @include breakpoint($break-menu) {
@@ -53,4 +59,10 @@ body {
             @include span(4);
         }
     }
+}
+
+#footer {
+    line-height: $line-height-footer;
+    margin-top: $margin-main;
+    text-align: center;
 }
