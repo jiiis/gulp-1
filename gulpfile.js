@@ -5,6 +5,10 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     plumber = require('gulp-plumber');
 
+gulp.task('html', function() {
+    gulp.src('app/**/*.html');
+});
+
 gulp.task('scripts', function() {
     gulp.src(['app/js/**/*.js', '!app/js/**/*.min.js'])
         .pipe(plumber())
@@ -29,6 +33,7 @@ gulp.task('compass', function() {
 });
 
 gulp.task('watch', function() {
+    gulp.watch('app/**/*.html', ['html']);
     gulp.watch('app/js/**/*.js', ['scripts']);
     gulp.watch('app/scss/**/*.scss', ['compass']);
 });
