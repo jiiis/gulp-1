@@ -2,6 +2,7 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
     compass = require('gulp-compass'),
+    autoprefixer = require('gulp-autoprefixer'),
     plumber = require('gulp-plumber');
 
 gulp.task('scripts', function() {
@@ -23,6 +24,7 @@ gulp.task('compass', function() {
             sass: 'app/scss',
             require: ['susy', 'breakpoint']
         }))
+        .pipe(autoprefixer('last 2 versions'))
         .pipe(gulp.dest('app/css'));
 });
 
