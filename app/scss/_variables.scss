@@ -1,25 +1,24 @@
-$color-body-background: #eee;
+$margin-section-horizontal: 5px;
+$margin-p-page: 26px 0;
+$margin-title: 22px 0;
+$margin-title-content: 22px 0 0; 
 
-$color-body-text: #488;
+$padding-page: 0 3%;
+$padding-page-content: 16px 3%;
 
-$line-height-mobile: 20px;
+$width-break: 700px;
+$width-container: 960px;
 
+$line-height-body: 24px;
+$line-height-body-mobile: 24px;
 $line-height-footer: 50px;
 
-$font-family-primary: Lucida Grande;
+$color-body: #488;
 
-$font-size-mobile: 16px;
+$background-body: #eee;
+$background-page: #ddd;
 
+$font-family-body: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$font-size-body: 16px;
+$font-size-body-mobile: 14px;
 $font-weight-body: 400;
-
-$break-menu: 700px;
-
-$font-size: 14px;
-
-$line-height: 18px;
-
-$container: 960px;
-
-$white: #ddd;
-
-$margin-main: 5px;

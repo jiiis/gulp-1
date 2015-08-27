@@ -5,19 +5,22 @@ $susy: (
     gutter-position: inside
 );
 
-body {
+* {
     margin: 0;
     padding: 0;
-    background: $color-body-background;
-    color: $color-body-text;
-    line-height: $line-height-mobile;
-    font-family: $font-family-primary;
-    font-size: $font-size-mobile;
+}
+
+body {
+    line-height: $line-height-body-mobile;
+    color: $color-body;
+    background: $background-body;
+    font-family: $font-family-body;
+    font-size: $font-size-body-mobile;
     font-weight: $font-weight-body;
     
-    @include breakpoint($break-menu) {
-        font-size: $font-size;
-        line-height: $line-height;
+    @include breakpoint($width-break) {
+        line-height: $line-height-body;
+        font-size: $font-size-body;
     }
 }
 
@@ -26,43 +29,53 @@ body {
 }
 
 .page {
-    @include container($container);
-    background: $white;
-    padding: 0 3%;
+    @include container($width-container);
+    
+    padding: $padding-page;
+    background: $background-page;
 
     p {
-        margin: 26px 0;
+        margin: $margin-p-page;
     }
 }
 
 #header {
     text-align: center;
-
-    #header-wrapper {
-        @include span(12);
+    
+    .title {
+        margin: $margin-title;
     }
 }
 
 #content {
-    margin-top: $margin-main;
+    margin-top: $margin-section-horizontal;
+    
+    .page {
+        padding: $padding-page-content;
+        
+        .content-title {
+            margin: $margin-title-content;
+        }
+    }
 
     #primary {
         @include span(12);
-        @include breakpoint($break-menu) {
+        @include breakpoint($width-break) {
             @include span(8);
         }
     }
 
     #aside {
         @include span(12);
-        @include breakpoint($break-menu) {
+        @include breakpoint($width-break) {
             @include span(4);
         }
     }
 }
 
 #footer {
+    margin-top: $margin-section-horizontal;
     line-height: $line-height-footer;
-    margin-top: $margin-main;
     text-align: center;
+    font-style: italic;
 }
