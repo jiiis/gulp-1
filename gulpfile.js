@@ -70,6 +70,14 @@ gulp.task('build:clear', ['build:copy'], function() {
 
 gulp.task('build', ['build:clear']);
 
+gulp.task('build:serve', function() {
+    browserSync({
+        server: {
+            baseDir: 'build/'
+        }
+    });
+});
+
 gulp.task('watch', function() {
     gulp.watch('app/**/*.html', ['html']);
     gulp.watch('app/js/**/*.js', ['scripts']);
