@@ -4,6 +4,7 @@ var gulp = require('gulp'),
     compass = require('gulp-compass'),
     autoprefixer = require('gulp-autoprefixer'),
     plumber = require('gulp-plumber'),
+    del = require('del'),
     browserSync = require('browser-sync'),
     reload = browserSync.reload;
 
@@ -50,6 +51,24 @@ gulp.task('browser-sync', function() {
         }
     });
 });
+
+gulp.task('build:remove', function(cb) {
+    del('build', cb);
+});
+
+gulp.task('build:copy', ['build:remove'], function() {
+    return gulp.src('app/**/*')
+        .pipe(gulp.dest('build/'));
+});
+
+gulp.task('build:clear', ['build:copy'], function() {
+    del([
+        'build/scss',
+        'build/js/!(*.min.js)'
+    ]);
+});
+
+gulp.task('build', ['build:clear']);
 
 gulp.task('watch', function() {
     gulp.watch('app/**/*.html', ['html']);
