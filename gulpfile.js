@@ -10,6 +10,7 @@ var gulp = require('gulp'),
 
 gulp.task('html', function() {
     gulp.src('app/**/*.html')
+        .pipe(plumber())
         .pipe(reload({
             stream: true
         }));
