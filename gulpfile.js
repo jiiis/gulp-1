@@ -16,20 +16,7 @@ gulp.task('html', function() {
         }));
 });
 
-gulp.task('scripts', function() {
-    gulp.src(['app/js/**/*.js', '!app/js/**/*.min.js'])
-        .pipe(plumber())
-        .pipe(rename({
-            suffix: '.min'
-        }))
-        .pipe(uglify())
-        .pipe(gulp.dest('app/js'))
-        .pipe(reload({
-            stream: true
-        }));
-});
-
-gulp.task('compass', function() {
+gulp.task('css', function() {
     gulp.src('app/scss/style.scss')
         .pipe(plumber())
         .pipe(compass({
@@ -40,6 +27,19 @@ gulp.task('compass', function() {
         }))
         .pipe(autoprefixer('last 2 versions'))
         .pipe(gulp.dest('app/css'))
+        .pipe(reload({
+            stream: true
+        }));
+});
+
+gulp.task('js', function() {
+    gulp.src(['app/js/**/*.js', '!app/js/**/*.min.js'])
+        .pipe(plumber())
+        .pipe(rename({
+            suffix: '.min'
+        }))
+        .pipe(uglify())
+        .pipe(gulp.dest('app/js'))
         .pipe(reload({
             stream: true
         }));
@@ -81,8 +81,8 @@ gulp.task('build:serve', function() {
 
 gulp.task('watch', function() {
     gulp.watch('app/**/*.html', ['html']);
-    gulp.watch('app/js/**/*.js', ['scripts']);
-    gulp.watch('app/scss/**/*.scss', ['compass']);
+    gulp.watch('app/js/**/*.js', ['js']);
+    gulp.watch('app/scss/**/*.scss', ['css']);
 });
 
-gulp.task('default', ['html', 'scripts', 'compass', 'browser-sync', 'watch']);
+gulp.task('default', ['html', 'js', 'css', 'browser-sync', 'watch']);
